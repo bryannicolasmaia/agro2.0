@@ -1,1 +1,417 @@
 
+
+/* CONFIGURAÇÕES GERAIS */
+
+:root {
+    --fundo: #101A15;
+    --fundo-claro: #19271E;
+    --verde: #75A96B;
+    --verde-claro: #A6CB8B;
+    --texto: #F0F1E9;
+    --texto-suave: #B9C2B6;
+    --borda: #344638;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    min-height: 75px;
+    padding: 15px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background-color: #0B120E;
+    border-bottom: 1px solid var(--borda);
+}
+
+.marca {
+    color: var(--texto);
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.marca span {
+    color: var(--verde);
+}
+
+.navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navegacao a {
+    color: var(--texto-suave);
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.navegacao a:hover {
+    color: var(--verde-claro);
+}
+
+
+/* ABERTURA */
+
+.hero {
+    min-height: 560px;
+    padding: 90px 10%;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #101A15 5%,
+            #101A15DD 50%,
+            #101A1570
+        ),
+        url("FOTO-PRINCIPAL-A-CREDITO-AdobeStock.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-conteudo {
+    max-width: 700px;
+}
+
+.sobretitulo {
+    color: var(--verde-claro);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: var(--texto);
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--verde-claro);
+}
+
+.hero-descricao {
+    max-width: 550px;
+    color: var(--texto-suave);
+    margin: 25px 0 30px;
+}
+
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+    padding: 12px 23px;
+
+    background-color: var(--verde);
+    color: #101A15;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition:
+        background-color 0.3s,
+        transform 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--verde-claro);
+    transform: translateY(-3px);
+}
+
+
+/* SEÇÕES */
+
+.secao {
+    padding: 85px 9%;
+    scroll-margin-top: 25px;
+}
+
+.secao-alternada {
+    background-color: var(--fundo-claro);
+}
+
+.titulo-secao {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.titulo-secao h2 {
+    color: var(--verde-claro);
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.3;
+}
+
+.titulo-secao > p:last-child {
+    color: var(--texto-suave);
+    margin-top: 12px;
+}
+
+
+/* CONTEÚDO */
+
+.conteudo {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.texto p {
+    margin-bottom: 20px;
+    color: var(--texto-suave);
+}
+
+.imagem {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+
+    max-width: 520px;
+    height: auto;
+
+    display: block;
+
+    border-radius: 8px;
+    border: 1px solid var(--borda);
+
+    box-shadow: 0 12px 30px #00000035;
+}
+
+.texto-centralizado {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.texto-centralizado p {
+    margin-bottom: 22px;
+    color: var(--texto-suave);
+}
+
+
+/* CARTÕES */
+
+.grade-beneficios {
+    max-width: 1150px;
+    margin: 55px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.cartao {
+    padding: 28px;
+
+    background-color: var(--fundo-claro);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    border-color: var(--verde);
+}
+
+.numero {
+    color: var(--verde-claro);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cartao h3 {
+    color: var(--texto);
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.cartao p {
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+
+/* ENCERRAMENTO */
+
+.encerramento {
+    padding: 90px 8%;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            #101A15DD,
+            #101A15F0
+        ),
+        url("aura.jpeg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.encerramento h2 {
+    max-width: 700px;
+    margin: 0 auto 30px;
+
+    color: var(--texto);
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+    padding: 35px 20px;
+    text-align: center;
+
+    background-color: #0B120E;
+    border-top: 1px solid var(--borda);
+}
+
+.rodape p {
+    color: var(--verde-claro);
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.rodape small {
+    display: block;
+    color: var(--texto-suave);
+    margin-top: 8px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navegacao {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 70px 7%;
+    }
+
+    .secao {
+        padding: 65px 7%;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .imagem {
+        max-width: 100%;
+    }
+
+    .grade-beneficios {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .hero {
+        min-height: 430px;
+        padding: 55px 6%;
+    }
+
+    .navegacao {
+        gap: 12px;
+    }
+
+    .navegacao a {
+        font-size: 12px;
+    }
+
+    .secao {
+        padding: 50px 6%;
+    }
+
+    .grade-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao {
+        padding: 23px;
+    }
+
+}
+
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto;
+        transition: none;
+    }
+
+}
